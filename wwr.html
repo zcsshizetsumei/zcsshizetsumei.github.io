@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWR国际服简介</title>
+    <style>
+        /* 导航栏 */
+        .navbar {
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        /* 导航栏字体 */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            font-weight: 350;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer; /* 添加手型光标 */
+        }
+        /* 鼠标放导航栏上去背景会变 */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /*  侧边目录  */
+        .sidebar {
+            position: fixed;
+            top: 60px; /* 与导航栏下方对齐 */
+            left: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+        
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer; /* 添加手型光标 */
+        }
+        
+        .content {
+            margin-top: 40px;
+            margin: 60px auto; /* 上下边距为0，左右边距自动调整 */
+            width:1000px;
+            text-align:left;
+            padding:20px;
+        }
+        
+        .section {
+            display: none; /* 初始隐藏所有部分 */
+        }
+        
+        /* 不同页面的样式 */
+        .home .sidebar a.home,
+        .about .sidebar a.about,
+        .services .sidebar a.services,
+        .contact .sidebar a.contact {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<div class="navbar">
+    <!-- 导航链接 -->
+    <a onclick="showSection('home', this)">主页</a>
+    <a onclick="showSection('about', this)">安卓下载</a>
+    <a onclick="showSection('services', this)">ios下载</a>
+    <a onclick="showSection('contact', this)">电脑端下载</a>
+    <a onclick="showSection('ziyuan', this)">数据资料</a>
+
+</div>
+ 
+<div class="sidebar">    
+    <a href="#1">片段一</a>
+    <a href="#2">片段二</a>
+    <a href="#3">片段三</a>
+<!-- 网站内容区域 -->
+<div class="content">
+    <div id="home" class="section home">
+        <h1>大家好，这里是zcsshi的WWR小站，在这里我整合了一下我所了解的关于war robots的信息  </h1>
+        <h2>此文章意在带给大家国际服的下载方式，数据知识等一些，本人也很热爱这个游戏，感谢大家能够阅读我的文章
+            <br><br>
+            <section id="1">
+
+            下面将简单说明一下国际服,在<a href="https://warrobots.com/zh/" target="_blank">war robots官网</a>中国际服只有三个地方可以下载
+            <br>
+            <section id="1">
+
+            <br>
+             <img src="guojifutupian.png" width="1000" height="600">
+            <h2>
+                <section id="2">
+
+                <h2>1.Google Play 此方式使用于安卓端</h2>
+                <h2>2.App Store 此方式使用于苹果端 </h2>
+                <h2>3.Steam 此方式使用于电脑端<h2>
+                    <section id="2">
+
+                    <img src="image-4.png" width="1000" height="300">
+                    <h2>我将尽我所了解的最大程度帮助各位来下载国际服</h2>
+    </div>
+
+    <!-- 这是一个注释 -->
+
+
+    <div id="about" class="section about">
+        <h1>安卓端下载方式</h1>
+        <h2>安卓用户仅通过google play下载，并且游戏中用户保存进度也只能保存在Google Play账户中，你可以通过该账户保存自己的游戏数据</h2>
+        <br>
+        <br>
+        <h2>操作步骤：</h2>
+
+        <h2>一、华为/荣耀 用户</h2>
+        <p>这类手机由于和谷歌不支持 我们将通过使用<a href="https://m.ourplay.net" target="_blank">ourplay</a>（点击进入）软件平台（类似于steam，不过ourplay还提供加速服务）其他品牌手机也可以使用这种方式。<p>
+        <p>1.下载ourplay，手机自带的浏览器均可直接搜索下载</p>
+        <p>2.打开ourplay，登录你的谷歌账号（注册/购买账号在后边），使用科学上网的环境打开googleplay，在里面搜索war robots下载即可</p>
+        <br>
+        <br>
+        
+        <h2>二、除华为/荣耀 安卓用户</h2>
+        <p>1.可直接下载google play 登录谷歌账号 里面搜索war robots下载即可</p>
+        <br>
+        <br>
+        <br>
+        
+        <h1>&gt;&gt;&gt; <strong>谷歌账号注册</strong></h1>
+        
+        <h3>1.需要科学上网的环境</h3>
+        <h3>2.使用浏览器，推荐chrome浏览器（可以其他），下载好之后将浏览器的语言选择为English(United States)</h3>
+        <img src="image-1.png" alt="alt text" width="1000" height="600">
+        <h3>打开无痕模式（电脑端使用按Ctrl+Shift+N）</h3>
+        <h3>进入<a href="https://support.google.com/accounts/answer/27441?hl=zh-Han" target="_blank">谷歌官网</a>注册，将注册时的界面语言也选为 English(United States)</h3>
+        <img src="image-3.png" alt="alt text" width="1000" height="600">
+        <h3>填写信息，可以使用自己的手机号进行注册</h3>
+        <br><br><br><br><br> 
+        <h1>谷歌账号购买</h1>
+        
+        <h3>进入ourplay中可进行购买，商家附带一条龙服务</h3>
+        </div>
+
+<!-- 这是一个注释 -->
+
+    <div id="services" class="section services">
+        <h1>iOS端下载方式</h1>
+        <p>苹果用户在使用App Store时用的自己账号下载war robots时将会下载国际服，如果想要下载国际服需要一个外服的id。</p>
+        <h2>操作步骤：</h2>
+        <ol>
+            <li>购买外服id，tb即可，在App Store中下载war robots。</li>
+            <li>换回自己的账号进行游戏即可。</li>
+        </ol>
+    </div>
+
+<!-- 这是一个注释 -->
+
+    <div id="contact" class="section contact">
+        <h1>电脑端下载方式</h1>
+        <p>相比之下电脑端下载就很轻松</p>
+        <h2>操作步骤：</h2>
+        <ol>
+            <li>下载steam，点击进入<a href="https://store.steampowered.com/" target="_blank">官网</a></li>
+            <li>注册并使用steam</li>
+            <li>搜索war robots下载即可</li>
+        </ol>
+    </div>
+
+    <!-- 这是一个注释 -->
+
+    <div id="ziyuan" class="section ziyuan">Services Section</div>
+
+</div>
+
+<!-- 引入marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    // JavaScript代码
+    function showSection(sectionId, element) {
+        // 隐藏所有部分
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        // 显示指定部分
+        document.getElementById(sectionId).style.display = 'block';
+        
+        // 移除所有链接的激活状态
+        var sidebarLinks = document.querySelectorAll('.sidebar a');
+        sidebarLinks.forEach(function(link) {
+            link.classList.remove('active');
+        });
+        // 添加激活状态到当前链接
+        element.classList.add('active');
+    }
+    // 默认显示第一个部分
+    showSection('home', document.querySelector('.sidebar a:first-child'));
+
+    // 加载Markdown内容并转换为HTML
+    fetch('wwr.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('home').innerHTML = marked(text);
+        });
+</script>
+
+</body>
+</html>
