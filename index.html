@@ -7,67 +7,131 @@
     <style>
         /* 导航栏 */
         .navbar {
-            background-color: #333;
+            background-color: #202020;
             position: fixed;
             width: 100%;
+            height: 80px;
             top: 0;
             left: 0;
             z-index: 1000;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
         }
-        /* 导航栏字体 */
+        /* 导航栏中间字体 */
         .navbar a {
-            float: left;
             display: block;
             color: white;
-            font-weight: 350;
+            font-weight: 1000;
             text-align: center;
-            padding: 14px 16px;
+            padding: 20px 30px;
             text-decoration: none;
             cursor: pointer; /* 添加手型光标 */
         }
+        /* 导航栏左边字体 */
+        .navbar b {
+            display: block;
+            color: white;
+            font-weight: 750;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+        }
+        .navbar c {
+            display: block;
+            color: white;
+            font-weight: 1000;
+            padding: 20px; 
+            text-decoration: none;
+            cursor: pointer; /* 添加手型光标 */
+        }
+        /* 导航栏右边图标加文字 */
+        .navbar .profile-link {
+            position: relative;
+            left: -10px;
+            display: flex; /* 使用Flexbox进行布局 */
+            align-items: center; /* 垂直居中图标和文本 */
+            color: white; /* 链接文字颜色 */
+            text-decoration: none; /* 去除下划线 */
+        }
+        .navbar .nav-icon {
+            position: relative;
+            top: 2px;
+            left: 17px;
+            width: 24px; /* 或者任何其他尺寸 */
+            height: 24px; /* 保持宽高一致 */
+            border-radius: 50%; /* 设置border-radius为50%，使图标变成圆形 */
+            object-fit: cover; /* 确保图片在容器中完全覆盖，不会失真 */
+            margin-right: 8px; /* 在图标和文本之间添加一些空间 */
+        }
+        /*      顶部三个容器      */
+        .left {
+            display: flex;
+            width: 100px;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            margin-left: -200px;  /* 左侧负边距为左容器宽度的一半 */
+            margin-right: -100px; /* 右侧负边距为右容器宽度的一半 */
+        }
+        .right {
+            display: flex;
+            justify-content: flex-end;
+            width: 100px;
+        }
+        /*      顶部三个容器      */
+
         /* 鼠标放导航栏上去背景会变 */
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
-        /*  侧边目录  */
-        .sidebar {
-            position: fixed;
-            top: 60px; /* 与导航栏下方对齐 */
-            left: 0;
-            width: 200px;
-            background-color: #f1f1f1;
-            padding: 20px;
-        }
         
-        .sidebar a {
-            display: block;
-            margin-bottom: 10px;
-            color: #333;
-            text-decoration: none;
-            cursor: pointer; /* 添加手型光标 */
+        /* 文档大背景 */
+        .backgroundd {
+            background-color: #000000;
+            margin: 0px -10px -60px;
         }
-        
+        /* 文档字体背景 */
         .content {
             margin-top: 40px;
-            margin: 60px auto; /* 上下边距为0，左右边距自动调整 */
+            margin: 60px 300px;
             width:1000px;
-            text-align:left;
+            color: #ddd;
+            background-color: #000000;
             padding:20px;
         }
+    
         
         .section {
             display: none; /* 初始隐藏所有部分 */
         }
-        
-        /* 不同页面的样式 */
-        .home .sidebar a.home,
-        .about .sidebar a.about,
-        .services .sidebar a.services,
-        .contact .sidebar a.contact {
+        .bold-text {
             font-weight: bold;
-            color: blue;
         }
+
+
+        /*   页脚   */
+        /* 页脚样式 */
+       .bottomer {
+        width: 100%;
+        background-color: #1e1e1e;
+        bottom: 0;
+        height: 60px;
+        padding: 20px 0; /* 上下内边距，左右内边距设为0 */
+        left: 0; /* 确保页脚从左边界开始 */
+        right: 0; /* 确保页脚延伸到右边界 */
+       }
+       .bottomer .wenzi1 {
+        background-color: #ffaa00;
+        height: 5px;
+        text-align: center;
+        color: aqua;
+        font-weight: 500;
+       }
+
     </style>
 </head>
 <body>
@@ -75,16 +139,30 @@
 <!-- 导航栏 -->
 <div class="navbar">
     <!-- 导航链接 -->
+    <div class="letf">
+    <b>WAR ROBOTS Data</b>
+    </div>
+    <div class="center">
     <a onclick="showSection('home', this)">主页</a>
     <a onclick="showSection('about', this)">安卓下载</a>
     <a onclick="showSection('services', this)">ios下载</a>
     <a onclick="showSection('contact', this)">电脑端下载</a>
     <a onclick="showSection('ziyuan', this)">数据资料</a>
+    </div>
+    <div class="right">
+            <c href="http://www.warrobotszcsshi.top" class="profile-link">
+              <img src="zcsshi.jpg" alt="Icon" class="nav-icon" />
+              <c>zcsshi</c>
+            </c>
+          </div>
+    </div>
 
 </div>
  
 
 <!-- 网站内容区域 -->
+<div class="backgroundd">
+    
 <div class="content">
     <div id="home" class="section home">
         <h1>大家好，这里是zcsshi的WWR小站，在这里我整合了一下我所了解的关于war robots的信息  </h1>
@@ -101,8 +179,8 @@
                     <img src="image-4.png" width="1000" height="300">
                     <h2>我将尽我所了解的最大程度帮助各位来下载国际服</h2>
     </div>
-
-    <!-- 这是一个注释 -->
+<div>
+    <!-- 上面是主页 -->
 
 
     <div id="about" class="section about">
@@ -140,7 +218,7 @@
         <h3>进入ourplay中可进行购买，商家附带一条龙服务</h3>
         </div>
 
-<!-- 这是一个注释 -->
+<!-- 上面是安卓下载 -->
 
     <div id="services" class="section services">
         <h1>iOS端下载方式</h1>
@@ -152,7 +230,7 @@
         </ol>
     </div>
 
-<!-- 这是一个注释 -->
+<!-- 上面是ios下载 -->
 
     <div id="contact" class="section contact">
         <h1>电脑端下载方式</h1>
@@ -165,14 +243,24 @@
         </ol>
     </div>
 
-    <!-- 这是一个注释 -->
+<!-- 上面是电脑端下载 -->
 
-    <div id="ziyuan" class="section ziyuan">Services Section</div>
+    <div id="ziyuan" class="section ziyuan">Services Section
 
-</div>
+    </div>
 
-<!-- 引入marked.js -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <!-- 页脚 -->
+        <div class="bottomer">
+            <div class="wenzi1">文字<div>
+        <div>
+<div>
+
+
+
+
+
+
+
 <script>
     // JavaScript代码
     function showSection(sectionId, element) {
@@ -195,12 +283,7 @@
     // 默认显示第一个部分
     showSection('home', document.querySelector('.sidebar a:first-child'));
 
-    // 加载Markdown内容并转换为HTML
-    fetch('wwr.md')
-        .then(response => response.text())
-        .then(text => {
-            document.getElementById('home').innerHTML = marked(text);
-        });
+
 </script>
 
 </body>
